@@ -1,0 +1,17 @@
+{
+  "attribute.name.weapon.critChance": "Critical Chance",
+  "item.weaponmod.cactus_sword": "Cactus Sword",
+  "item.weaponmod.diamond_battleaxe": "Diamond Battleaxe",
+  "item.weaponmod.diamond_dagger": "Diamond Dagger",
+  "item.weaponmod.golden_battleaxe": "Golden Battleaxe",
+  "item.weaponmod.golden_dagger": "Golden Dagger",
+  "item.weaponmod.iron_battleaxe": "Iron Battleaxe",
+  "item.weaponmod.iron_dagger": "Iron Dagger",
+  "item.weaponmod.pellet": "Pellet",
+  "item.weaponmod.slingshot": "Slingshot",
+  "item.weaponmod.stone_battleaxe": "Stone Battleaxe",
+  "item.weaponmod.stone_dagger": "Stone Dagger",
+  "item.weaponmod.wooden_battleaxe": "Wooden Battleaxe",
+  "item.weaponmod.wooden_dagger": "Wooden Dagger",
+  "itemGroup.cactusweapons": "Weapons"
+}
