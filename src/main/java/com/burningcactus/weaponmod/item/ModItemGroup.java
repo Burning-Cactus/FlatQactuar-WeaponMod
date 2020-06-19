@@ -1,6 +1,5 @@
-package com.burningcactus.weaponmod;
+package com.burningcactus.weaponmod.item;
 
-import com.burningcactus.weaponmod.item.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;

@@ -15,7 +15,7 @@ public class ModEffects {
     @SubscribeEvent
     public static void registerEffects(RegistryEvent.Register<Effect> event) {
         event.getRegistry().registerAll(
-                new BleedEffect(EffectType.HARMFUL, 100000).setRegistryName("bleed")
+                new BleedEffect(EffectType.HARMFUL, 0xbf0000).setRegistryName("bleed")
         );
     }
 }
