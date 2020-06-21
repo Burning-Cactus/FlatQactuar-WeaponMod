@@ -1,6 +1,5 @@
 package com.burningcactus.weaponmod.enchantment;
 
-import com.burningcactus.weaponmod.potion.BleedEffect;
 import com.burningcactus.weaponmod.potion.ModEffects;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentType;

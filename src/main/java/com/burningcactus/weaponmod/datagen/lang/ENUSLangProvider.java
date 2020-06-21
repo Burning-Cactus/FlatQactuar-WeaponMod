@@ -7,6 +7,7 @@ import com.burningcactus.weaponmod.item.ModItems;
 import com.burningcactus.weaponmod.potion.ModEffects;
 import com.burningcactus.weaponmod.util.ModAttributes;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.common.data.LanguageProvider;
 
 public class ENUSLangProvider extends LanguageProvider {
@@ -17,6 +18,13 @@ public class ENUSLangProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
+        //Attributes
+        add("attribute.name." + ModAttributes.CRITICAL_CHANCE.getName(), "Critical Chance");
+        //Effects
+        add(ModEffects.BLEED, "Bleed");
+        //Enchantments
+        add(ModEnchantments.CRITICAL_STRIKE, "Critical Strike");
+        add(ModEnchantments.SERRATED, "Serrated Edge");
         //Items
         add(ModItems.WOODEN_BATTLEAXE, "Wooden Battleaxe");
         add(ModItems.STONE_BATTLEAXE, "Stone Battleaxe");
@@ -29,15 +37,9 @@ public class ENUSLangProvider extends LanguageProvider {
         add(ModItems.GOLDEN_DAGGER, "Golden Dagger");
         add(ModItems.DIAMOND_DAGGER, "Diamond Dagger");
         add(ModItems.CACTUS_SWORD, "Cactus Sword");
-        //Enchantments
-        add(ModEnchantments.CRITICAL_STRIKE, "Critical Strike");
-        add(ModEnchantments.SERRATED, "Serrated Edge");
-        //Effects
-        add(ModEffects.BLEED, "Bleed");
-        //Attributes
-        add("attribute.name." + ModAttributes.CRITICAL_CHANCE.getName(), "Critical Chance");
-        add("attribute.name." + ModAttributes.MELEE_REACH.getName(), "Extended Reach");
         //Item Groups
         add(ModItemGroup.WEAPON_GROUP.getTranslationKey(), "Weapons");
+        //Tooltips
+        add("tooltip.dagger", TextFormatting.RED + "Backstabs inflict extra damage plus bleed.");
     }
 }

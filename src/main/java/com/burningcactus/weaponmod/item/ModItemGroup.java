@@ -11,8 +11,8 @@ public class ModItemGroup extends ItemGroup {
 
     private Supplier<Item> item;
 
-    public ModItemGroup(String p_i230076_1_, Supplier<Item> itemProvider) {
-        super(p_i230076_1_);
+    public ModItemGroup(String name, Supplier<Item> itemProvider) {
+        super(name);
         item = itemProvider;
     }
 

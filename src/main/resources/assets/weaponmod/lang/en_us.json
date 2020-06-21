@@ -1,6 +1,5 @@
 {
   "attribute.name.weapon.critChance": "Critical Chance",
-  "attribute.name.weapon.reach": "Extended Reach",
   "effect.weaponmod.bleed": "Bleed",
   "enchantment.weaponmod.critical_strike": "Critical Strike",
   "enchantment.weaponmod.serrated": "Serrated Edge",
@@ -15,5 +14,6 @@
   "item.weaponmod.stone_dagger": "Stone Dagger",
   "item.weaponmod.wooden_battleaxe": "Wooden Battleaxe",
   "item.weaponmod.wooden_dagger": "Wooden Dagger",
-  "itemGroup.cactusweapons": "Weapons"
+  "itemGroup.cactusweapons": "Weapons",
+  "tooltip.dagger": "\u00A7cBackstabs inflict extra damage plus bleed."
 }
