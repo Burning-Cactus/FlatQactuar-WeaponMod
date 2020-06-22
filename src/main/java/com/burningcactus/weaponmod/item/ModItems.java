@@ -24,6 +24,11 @@ public class ModItems {
     public static final Item IRON_DAGGER = null;
     public static final Item GOLDEN_DAGGER = null;
     public static final Item DIAMOND_DAGGER = null;
+    public static final Item WOODEN_SPEAR = null;
+    public static final Item STONE_SPEAR = null;
+    public static final Item IRON_SPEAR = null;
+    public static final Item GOLDEN_SPEAR = null;
+    public static final Item DIAMOND_SPEAR = null;
     public static final Item CACTUS_SWORD = null;
 
     @SubscribeEvent
@@ -39,6 +44,11 @@ public class ModItems {
                 new DaggerItem(ItemTier.IRON, 0, -1.6F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("iron_dagger"),
                 new DaggerItem(ItemTier.GOLD, 0, -1.6F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("golden_dagger"),
                 new DaggerItem(ItemTier.DIAMOND, 0, -1.6F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("diamond_dagger"),
+                new SpearItem(ItemTier.WOOD, 1, -2.8F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("wooden_spear"),
+                new SpearItem(ItemTier.STONE, 1, -2.8F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("stone_spear"),
+                new SpearItem(ItemTier.IRON, 1, -2.8F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("iron_spear"),
+                new SpearItem(ItemTier.GOLD, 1, -2.8F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("golden_spear"),
+                new SpearItem(ItemTier.DIAMOND, 1, -2.8F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("diamond_spear"),
                 new SwordItem(ItemTier.STONE, 3, -2.4F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("cactus_sword")
         );
     }

@@ -22,6 +22,10 @@ public final class WeaponEventHandler {
 
     private Random rand = new Random();
 
+    /**
+     * This method is called before damage is applied to the entity, so that it can change the effects and damage.
+     * @param event - Event used to handle damage calculations
+     */
     @SubscribeEvent
     public void onHurtEntity(LivingHurtEvent event) {
         Entity attacker = event.getSource().getTrueSource();
@@ -30,7 +34,6 @@ public final class WeaponEventHandler {
             Item item = stack.getItem();
             Entity target = event.getEntityLiving();
             float damage = event.getAmount();
-            handleCrit(event, (LivingEntity) attacker, stack, damage);
             if(item instanceof DaggerItem) {
                 Vec3d attackerView = attacker.getLookVec();
                 Vec3d targetView = target.getLookVec();
@@ -39,11 +42,20 @@ public final class WeaponEventHandler {
                     System.out.println("Backstab!");
                     event.setAmount(damage + damage);
                     ((LivingEntity)target).addPotionEffect(new EffectInstance(ModEffects.BLEED, 100));
+                    return;
                 }
             }
+            handleCrit(event, (LivingEntity) attacker, stack, damage);
         }
     }
 
+    /**
+     * Method to handle critical hits from this mod.
+     * @param event - Event to handle
+     * @param attacker - Entity performing the crit
+     * @param item - Item being used to attack
+     * @param damage - Initial damage before critical hit calculations
+     */
     private void handleCrit(LivingHurtEvent event, LivingEntity attacker, ItemStack item, float damage) {
 //        System.out.println(attacker.getAttribute(ModAttributes.CRITICAL_CHANCE).getValue() + (EnchantmentHelper.getEnchantmentLevel(ModEnchantments.CRITICAL_STRIKE, item) * 0.04));
         if(rand.nextDouble() < attacker.getAttribute(ModAttributes.CRITICAL_CHANCE).getValue() + (EnchantmentHelper.getEnchantmentLevel(ModEnchantments.CRITICAL_STRIKE, item) * 0.04)) {
@@ -52,6 +64,10 @@ public final class WeaponEventHandler {
         }
     }
 
+    /**
+     * Register the mod's attributes to any entity that is being created.
+     * @param event - Event to handle
+     */
     @SubscribeEvent
     public void onEntityBuild(EntityEvent.EntityConstructing event) {
         Entity entity = event.getEntity();

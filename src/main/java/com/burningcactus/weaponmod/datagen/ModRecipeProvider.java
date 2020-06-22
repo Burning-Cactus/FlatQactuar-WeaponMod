@@ -32,6 +32,11 @@ public class ModRecipeProvider extends RecipeProvider {
         buildDagger(consumer, ModItems.IRON_DAGGER, Items.IRON_INGOT);
         buildDagger(consumer, ModItems.GOLDEN_DAGGER, Items.GOLD_INGOT);
         buildDagger(consumer, ModItems.DIAMOND_DAGGER, Items.DIAMOND);
+        buildSpear(consumer, ModItems.WOODEN_SPEAR, ItemTags.PLANKS);
+        buildSpear(consumer, ModItems.STONE_SPEAR, Blocks.COBBLESTONE);
+        buildSpear(consumer, ModItems.IRON_SPEAR, Items.IRON_INGOT);
+        buildSpear(consumer, ModItems.GOLDEN_SPEAR, Items.GOLD_INGOT);
+        buildSpear(consumer, ModItems.DIAMOND_SPEAR, Items.DIAMOND);
         buildSword(consumer, ModItems.CACTUS_SWORD, Blocks.CACTUS);
     }
 
@@ -84,6 +89,28 @@ public class ModRecipeProvider extends RecipeProvider {
                 .patternLine("#")
                 .patternLine("#")
                 .patternLine("$")
+                .addCriterion("has_material", this.hasItem(material))
+                .build(consumer);
+    }
+
+    private void buildSpear(Consumer<IFinishedRecipe> consumer, IItemProvider result, IItemProvider material) {
+        ShapedRecipeBuilder.shapedRecipe(result)
+                .key('#', material)
+                .key('$', Tags.Items.RODS_WOODEN)
+                .patternLine(" ##")
+                .patternLine(" $#")
+                .patternLine("$  ")
+                .addCriterion("has_material", this.hasItem(material))
+                .build(consumer);
+    }
+
+    private void buildSpear(Consumer<IFinishedRecipe> consumer, IItemProvider result, Tag<Item> material) {
+        ShapedRecipeBuilder.shapedRecipe(result)
+                .key('#', material)
+                .key('$', Tags.Items.RODS_WOODEN)
+                .patternLine(" ##")
+                .patternLine(" $#")
+                .patternLine("$  ")
                 .addCriterion("has_material", this.hasItem(material))
                 .build(consumer);
     }

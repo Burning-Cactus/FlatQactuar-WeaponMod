@@ -7,6 +7,9 @@ import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IItemTier;
 import net.minecraft.item.SwordItem;
 
+/**
+ * The Battleaxe item is a melee weapon that has a chance to inflict critical hits. Critical hits deal 50% extra damage.
+ */
 public class BattleaxeItem extends SwordItem {
     private final float critChance;
     public BattleaxeItem(IItemTier tier, int strength, float speed, float critChance, Properties builder) {
@@ -18,7 +21,7 @@ public class BattleaxeItem extends SwordItem {
     public Multimap<String, AttributeModifier> getAttributeModifiers(EquipmentSlotType slot) {
         Multimap<String, AttributeModifier> attributes = super.getAttributeModifiers(slot);
         if(slot == EquipmentSlotType.MAINHAND) {
-            attributes.put(ModAttributes.CRITICAL_CHANCE.getName(), new AttributeModifier(ModAttributes.CRITICAL_CHANCE_UUID, "Weapon Modifier", critChance, AttributeModifier.Operation.ADDITION));
+            attributes.put(ModAttributes.CRITICAL_CHANCE.getName(), new AttributeModifier(ModAttributes.CRITICAL_CHANCE_UUID, "Weapon modifier", critChance, AttributeModifier.Operation.ADDITION));
         }
         return attributes;
     }

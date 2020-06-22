@@ -8,9 +8,12 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.potion.EffectInstance;
 
+/**
+ * This enchantment applies the bleed effect to any living entity that it hits.
+ */
 public class BleedEnchantment extends Enchantment {
-    protected BleedEnchantment(Rarity p_i46731_1_, EquipmentSlotType[] p_i46731_3_) {
-        super(p_i46731_1_, EnchantmentType.WEAPON, p_i46731_3_);
+    protected BleedEnchantment(Rarity rarity, EquipmentSlotType[] slotTypes) {
+        super(rarity, EnchantmentType.WEAPON, slotTypes);
     }
 
     /**

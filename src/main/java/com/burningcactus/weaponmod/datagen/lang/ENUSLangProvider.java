@@ -36,6 +36,11 @@ public class ENUSLangProvider extends LanguageProvider {
         add(ModItems.IRON_DAGGER, "Iron Dagger");
         add(ModItems.GOLDEN_DAGGER, "Golden Dagger");
         add(ModItems.DIAMOND_DAGGER, "Diamond Dagger");
+        add(ModItems.WOODEN_SPEAR, "Wooden Spear");
+        add(ModItems.STONE_SPEAR, "Stone Spear");
+        add(ModItems.IRON_SPEAR, "Iron Spear");
+        add(ModItems.GOLDEN_SPEAR, "Golden Spear");
+        add(ModItems.DIAMOND_SPEAR, "Diamond Spear");
         add(ModItems.CACTUS_SWORD, "Cactus Sword");
         //Item Groups
         add(ModItemGroup.WEAPON_GROUP.getTranslationKey(), "Weapons");
