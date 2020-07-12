@@ -30,6 +30,8 @@ public class ModItems {
     public static final Item GOLDEN_SPEAR = null;
     public static final Item DIAMOND_SPEAR = null;
     public static final Item CACTUS_SWORD = null;
+    public static final Item BOOMERANG = null;
+    public static final Item GEM_BOOMERANG = null;
 
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
@@ -49,7 +51,9 @@ public class ModItems {
                 new SpearItem(ItemTier.IRON, 1, -2.8F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("iron_spear"),
                 new SpearItem(ItemTier.GOLD, 1, -2.8F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("golden_spear"),
                 new SpearItem(ItemTier.DIAMOND, 1, -2.8F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("diamond_spear"),
-                new SwordItem(ItemTier.STONE, 3, -2.4F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("cactus_sword")
+                new SwordItem(ItemTier.STONE, 3, -2.4F, new Item.Properties().group(WEAPON_GROUP)).setRegistryName("cactus_sword"),
+                new BoomerangItem(3, 3, new Item.Properties().maxDamage(70).group(WEAPON_GROUP)).setRegistryName("boomerang"),
+                new BoomerangItem(5, 5, new Item.Properties().maxDamage(300).group(WEAPON_GROUP)).setRegistryName("gem_boomerang")
         );
     }
 
